@@ -1,2 +1,2 @@
-# Prepcurse-Henry
-este es una prueba de repositorio Henry modulo 2 
+Esta es una prueba de como clonar un gitHub
+Humbeto Leal 
