@@ -65,6 +65,11 @@
 // Ene/31/2023  - Se instalo en gitHub
 // Ene/31/2023  - Dos
 // Ene/31/2023  - Tres
+// Ene/31/2023  - Cuatro
+// Ene/31/2023  - Cinco 
+// Ene/31/2023  - Seis
+// Ene/31/2023  - Siete
+
 
 #include <Wire.h> 
 #include <LiquidCrystal_I2C.h>
