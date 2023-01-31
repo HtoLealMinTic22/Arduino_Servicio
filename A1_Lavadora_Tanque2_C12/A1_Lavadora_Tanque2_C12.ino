@@ -8,6 +8,8 @@
 // 09/May/2022 -
 // 13/Dic/2022 - Se cambia la distacia de llenado tanque auxiliar a 29  
 // 14/Dic/2022 - Calcula el tiempo para llenar el tanque de agua limpia
+// 31/Ene/2023 - Se Instalo en Github
+
 
 // (bomba1, LOW);  // Apaga  Bomba1 LLenado desde el tanque auxiliar(8)
 // (bomba1, HIGH); // Prende Bomba1 LLenado desde el tanque auxiliar(8)
