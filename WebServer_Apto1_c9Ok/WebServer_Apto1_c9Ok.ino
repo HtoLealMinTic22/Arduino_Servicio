@@ -12,6 +12,7 @@
 // Se ejecuta en el navegador con 192.168.0.60/Sala_On 
 // Graba la Clave y Wifi en memoria RAM
 // Utiliza servo-motor en los dispositivos
+// Ene/31/2023 - Se instala en Github
 
 
 // Inicio de la configuracion del Modulo Esp8266
