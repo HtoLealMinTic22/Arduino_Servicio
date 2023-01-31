@@ -64,6 +64,7 @@
 //              - Ri-(Residuos Iniciales) 
 // Ene/26/2023  - Se cambio la velocidad del PuertoDos.begin(9600);
 // Ene/31/2023  - Se instalo en gitHub
+// Ene/31/2023  - Dos
 
 #include <Wire.h> 
 #include <LiquidCrystal_I2C.h>
