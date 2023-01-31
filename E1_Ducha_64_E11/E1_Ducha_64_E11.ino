@@ -1,4 +1,3 @@
-
 // Tx-12 Trasmite del Celular a Arduino, Rx-13 trasmite de Arduino a Celular 
 // Trabaja con dos octo-acopladores, en el llenado del tanque General de limpieza
 // llenaPileta / Ene/20/20
@@ -65,6 +64,7 @@
 // Ene/26/2023  - Se cambio la velocidad del PuertoDos.begin(9600);
 // Ene/31/2023  - Se instalo en gitHub
 // Ene/31/2023  - Dos
+// Ene/31/2023  - Tres
 
 #include <Wire.h> 
 #include <LiquidCrystal_I2C.h>
