@@ -374,7 +374,7 @@ void loop()
       if (mensaAnt != "Nr")
         {
          PuertoDos.print("Nr"); 
-         Serial.println("Apago la Valvula-Recicla ");
+         //Serial.println("Apago la Valvula-Recicla ");
          mensaAnt = "Nr" ;
         }
       
@@ -382,11 +382,11 @@ void loop()
 //
  vr_LLenoTanque  = digitalRead(PinTanque) ; 
  if (vr_LLenoTanque == LOW)  
-   { Serial.print("  Tq-Gral/Limpieza Con agua ");  
+   { //Serial.print("  Tq-Gral/Limpieza Con agua ");  
    }
  else
    { 
-    Serial.println("-- Tanque General de limpieza vacio --") ; 
+    //Serial.println("-- Tanque General de limpieza vacio --") ; 
     //swLimpieza     = 0 No / 1 Si
     //Serial.print("Valor de swLimpieza es..(1) : ") ;    
     //Serial.println(swLimpieza) ;    
@@ -394,7 +394,7 @@ void loop()
     if (swLimpieza == true )
       {
         // Desocupar los residuos del tanque
-        Serial.println("-- Eliminando residuos --") ; 
+        //Serial.println("-- Eliminando residuos --") ; 
 
         vrLimpia = 0 ;
         EEPROM.write(8, vrLimpia);  // Ya se hiso la limpieza de los residuos
@@ -407,7 +407,7 @@ void loop()
         delay(5000) ;
         desocupaTanque() ;
 
-        Serial.println("-- Envio Residuos ON1 -- ") ;  
+        //Serial.println("-- Envio Residuos ON1 -- ") ;  
 
         Mezclar=0;
         EEPROM.write(9, Mezclar);  // Opcion de mezclar o aguitar  */
