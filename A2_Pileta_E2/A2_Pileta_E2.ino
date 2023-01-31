@@ -27,7 +27,7 @@
 //              - Re-(Abre Residuos ) 
 //              - Ri-(Residuos Iniciales) 
 // Ene/31/2023  - Se instala en Github
-
+// Ene/31/2023  - Se instala en Github - Dos
 
 // se    bloquea - veloPaso =  500 ;
 // se    bloquea - veloPaso =  650 ;
