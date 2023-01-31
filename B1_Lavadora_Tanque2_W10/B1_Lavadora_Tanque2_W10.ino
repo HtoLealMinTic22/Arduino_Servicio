@@ -4,6 +4,7 @@
 // Jun/08/2022 - Se instalo PWM, para llenar tanque auxiliar 
 // Jun/13/2022 - Se cambio el pin bomba1(11) a PinPWM(10)
 // Dic/16/2022 - Se implemento el calculo de minutos desde la ultima lavada
+// Ene/31/2023 - Se instalo en Github
 
 #include <Wire.h> 
 #include <LiquidCrystal_I2C.h>
