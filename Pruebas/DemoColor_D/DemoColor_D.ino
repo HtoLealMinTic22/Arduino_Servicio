@@ -4,6 +4,7 @@
 // Creado ChepeCarlos
 // Tutorial Completo en https://nocheprogramacion.com
 // Canal Youtube https://youtube.com/alswnet?sub_confirmation=1
+// nombre GitHub / Pecebre_STA(#)
 
 template<class T> inline Print &operator <<(Print &obj, T arg) {
   obj.print(arg);
@@ -464,10 +465,9 @@ void funcionNivel() {
 
 
 void setup() {
-  Serial.begin(115200);
-  Serial.println("\nIniciando Server Web");
-  EEPROM.begin(4096);
-
+    Serial.begin(115200);
+    Serial.println("\nIniciando Server Web");
+    EEPROM.begin(4096);
 
     /// Reloj  
     if (!rtc.begin()) {
@@ -484,7 +484,7 @@ void setup() {
     }
 
 
-   /// Reloj  
+    /// Reloj  
     /// rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
     Wire.begin();     // 22-Clock / 21-Data  
     DateTime now = rtc.now();
@@ -494,32 +494,31 @@ void setup() {
     hrel1  = now.hour()  ;
     mrel1  = now.minute();
 
-  //  Conexion fija a una sola IP - Inicio ------
-  if (!WiFi.config(ip_local, gateway, subnet)) {
-    Serial.println("Error en configuracion");
-  }
-  WiFi.mode(WIFI_STA);
-  Serial.print("Conectando a Wifi ..");
-  WiFi.begin(ssid_1, password_1);
-  while (WiFi.status() != WL_CONNECTED) {
-    Serial.print(".");
-    delay(300);
-  }
-  //  Conexion fija a una sola IP - Final -------
-  
-  Serial.println(".. Conectado");
-  Serial.print("SSID: ");
-  Serial.print(WiFi.SSID());
-  Serial.print(" ID: ");
-  Serial.println(WiFi.localIP());
-
-  if (!MDNS.begin("elarbol")) {
-    Serial.println("Error configurando mDNS!");
-    while (1) {
-      delay(1000);
+    //  Conexion fija a una sola IP - Inicio ------
+    if (!WiFi.config(ip_local, gateway, subnet)) {
+      Serial.println("Error en configuracion");
     }
-  }
+    WiFi.mode(WIFI_STA);
+    Serial.print("Conectando a Wifi ..");
+    WiFi.begin(ssid_1, password_1);
+    while (WiFi.status() != WL_CONNECTED) {
+      Serial.print(".");
+      delay(300);
+    }
+    //  Conexion fija a una sola IP - Final -------
+  
+    Serial.println(".. Conectado");
+    Serial.print("SSID: ");
+    Serial.print(WiFi.SSID());
+    Serial.print(" ID: ");
+    Serial.println(WiFi.localIP());
 
+    if (!MDNS.begin("elarbol")) {
+      Serial.println("Error configurando mDNS!");
+      while (1) {
+        delay(1000);
+      }
+    }
 
     mod1 = EEPROM.read(0) ; // Modo 0-Automatico/1-Manual
     h1   = EEPROM.read(100) ; // Horario1 - Hora  
@@ -555,64 +554,64 @@ void setup() {
 
     for (uint8_t k1=0; k1<numeroRele; k1++ ){
        pinMode(relays[k1], OUTPUT);
-      };
+       digitalWrite(relays[k1], true);
+    };
 
 
-  #if defined (__AVR_ATtiny85__)
+    #if defined (__AVR_ATtiny85__)
     if (F_CPU == 16000000) clock_prescale_set(clock_div_1);
-  #endif
-  Serial.println("Inicial NeoPixel");
+    #endif
+    Serial.println("Inicial NeoPixel");
 
-  server.on("/" , mensajeBase);         // cualquier peticion que nos hagan los clientes 
-                                        // se responde con un "server.on"
-                                        // "mensajeBase", es la pagina Web
-  server.on("/vivo",  funcionEncender);
-  server.on("/muerto",funcionApagar);
+    server.on("/" , mensajeBase);         // cualquier peticion que nos hagan los clientes 
+                                          // se responde con un "server.on"
+                                          // "mensajeBase", es la pagina Web
+    server.on("/vivo",  funcionEncender);
+    server.on("/muerto",funcionApagar);
 
-  server.on("/arcoiris", funcionArcoiris);
-  server.on("/figuras",  funcionFiguras);
-  server.on("/luzentra", funcionLuzEnt);
+    server.on("/arcoiris", funcionArcoiris);
+    server.on("/figuras",  funcionFiguras);
+    server.on("/luzentra", funcionLuzEnt);
  
-  server.on("/horaLuz", funcionHoraLuz);
-  server.on("/minuLuz", funcionMinuLuz);
-  server.on("/duraLuz", funcionDuraLuz);
+    server.on("/horaLuz", funcionHoraLuz);
+    server.on("/minuLuz", funcionMinuLuz);
+    server.on("/duraLuz", funcionDuraLuz);
 
-  server.on("/horaCas", funcionHoraCas);
-  server.on("/minuCas", funcionMinuCas);
-  server.on("/duraCas", funcionDuraCas);
+    server.on("/horaCas", funcionHoraCas);
+    server.on("/minuCas", funcionMinuCas);
+    server.on("/duraCas", funcionDuraCas);
 
-  server.on("/hora3", funcionHora3);
-  server.on("/minu3", funcionMinu3);
-  server.on("/dura3", funcionDura3);
+    server.on("/hora3", funcionHora3);
+    server.on("/minu3", funcionMinu3);
+    server.on("/dura3", funcionDura3);
 
-  server.on("/hora4", funcionHora4);
-  server.on("/minu4", funcionMinu4);
-  server.on("/dura4", funcionDura4);
+    server.on("/hora4", funcionHora4);
+    server.on("/minu4", funcionMinu4);
+    server.on("/dura4", funcionDura4);
 
-  server.on("/diaActEnt", funcionDiaAct);     // Fecha ACTUAL  
-  server.on("/mesActEnt", funcionMesAct);
-  server.on("/anoActEnt", funcionAnoAct);  
-  server.on("/horActEnt", funcionHorAct);    
-  server.on("/minActEnt", funcionMinAct);
+    server.on("/diaActEnt", funcionDiaAct);     // Fecha ACTUAL  
+    server.on("/mesActEnt", funcionMesAct);
+    server.on("/anoActEnt", funcionAnoAct);  
+    server.on("/horActEnt", funcionHorAct);    
+    server.on("/minActEnt", funcionMinAct);
 
-  server.on("/hora1Alm", funcionAlmHor1);    // Alarmas UNO 
-  server.on("/minu1Alm", funcionAlmMin1);
-  server.on("/hora2Alm", funcionAlmHor2);    // Alarmas DOS
-  server.on("/minu2Alm", funcionAlmMin2);
-  server.on("/hora3Alm", funcionAlmHor3);    // Alarmas TRES
-  server.on("/minu3Alm", funcionAlmMin3);
+    server.on("/hora1Alm", funcionAlmHor1);    // Alarmas UNO 
+    server.on("/minu1Alm", funcionAlmMin1);
+    server.on("/hora2Alm", funcionAlmHor2);    // Alarmas DOS
+    server.on("/minu2Alm", funcionAlmMin2);
+    server.on("/hora3Alm", funcionAlmHor3);    // Alarmas TRES
+    server.on("/minu3Alm", funcionAlmMin3);
 
-  server.on("/nivel", funcionNivel);
+    server.on("/nivel", funcionNivel);
+    server.onNotFound(mensajeError);
 
-  server.onNotFound(mensajeError);
+    server.begin();                            // se inicia el servidor para que comience a escuchar peticiones
+    Serial.println("Servidor HTTP iniciado");
 
-  server.begin();                            // se inicia el servidor para que comience a escuchar peticiones
-  Serial.println("Servidor HTTP iniciado");
-
-  tira.begin();
-  tira.setBrightness(Nivel);
-  tira.show();
-  Pagina.replace("%ip", WiFi.localIP().toString());
+    tira.begin();
+    tira.setBrightness(Nivel);
+    tira.show();
+    Pagina.replace("%ip", WiFi.localIP().toString());
 }
 
 void loop() {
@@ -622,13 +621,13 @@ void loop() {
   #endif
   delay(10);
 
+   DateTime now = rtc.now();
+   anorel = now.year()  ;
+   mesrel = now.month() ;
+   diarel = now.day()   ;
+   hrel1  = now.hour()  ;
+   mrel1  = now.minute();
 
- // DateTime now = rtc.now();   
- // anorel = now.year()  ;
- // mesrel = now.month() ;
- // diarel = now.day()   ;
- // hrel1  = now.hour()  ;
- // mrel1  = now.minute();
 }
 void ColorArcoiris() {
   tira.rainbow(HueActual);
