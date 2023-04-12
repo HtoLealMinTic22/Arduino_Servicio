@@ -5,6 +5,7 @@
 // Jun/13/2022 - Se cambio el pin bomba1(11) a PinPWM(10)
 // Dic/16/2022 - Se implemento el calculo de minutos desde la ultima lavada
 // Ene/31/2023 - Se instalo en Github
+// Abr/12/2023 - Se instalo en la tarjeta 
 
 #include <Wire.h> 
 #include <LiquidCrystal_I2C.h>
@@ -328,7 +329,7 @@ void loop()
     */
       
  // hoy16dic
-     if (tgMinutos >= 720)           
+     if (tgMinutos >= 720)       // 12 Horas     
         //if (diarel>diamov)
         {
           if (swMezclador == false)
