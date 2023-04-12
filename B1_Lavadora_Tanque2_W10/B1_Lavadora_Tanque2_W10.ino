@@ -7,7 +7,7 @@
 // Ene/31/2023 - Se instalo en Github
 // Abr/12/2023 - Se instalo en la tarjeta 
 // Abr/12/2023 - Prueba dos
-  
+// Abr/12/2023 - Nombre GitHub / B1_LavTanq2(#) 
 
 #include <Wire.h> 
 #include <LiquidCrystal_I2C.h>
