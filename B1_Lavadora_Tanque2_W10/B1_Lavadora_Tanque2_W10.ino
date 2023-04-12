@@ -6,6 +6,8 @@
 // Dic/16/2022 - Se implemento el calculo de minutos desde la ultima lavada
 // Ene/31/2023 - Se instalo en Github
 // Abr/12/2023 - Se instalo en la tarjeta 
+// Abr/12/2023 - Prueba dos
+  
 
 #include <Wire.h> 
 #include <LiquidCrystal_I2C.h>
