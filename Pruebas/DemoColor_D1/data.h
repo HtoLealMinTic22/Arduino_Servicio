@@ -235,28 +235,21 @@ String Pagina = R"====(<!DOCTYPE html>
         const minuAlm3 = document.getElementById("Almminu3");
         consultaGET("http://%ip/minu3Alm?valor=" +  minuAlm3.value);}; 
     
-      // HOY13abr
       function cambiarEstado(){
         console.log("%ip");
         const elementoEstado = document.getElementById("botonSala");
         const label1Off       = document.getElementById("label1Off");
-        
         if(elementoEstado.className == "vivo")
          {elementoEstado.className = "muerto";
-          label1Off.innerHTML = 'Off';
-         }
-        else 
-         {elementoEstado.className = "vivo";
-          label1Off.innerHTML = 'On';
-         }
-         
+          label1Off.innerHTML = 'Off'; }
+        else {elementoEstado.className = "vivo";
+              label1Off.innerHTML = 'On';}
         console.log("Cambiando boton a " + elementoEstado.className)
         consultaGET("http://%ip/" + elementoEstado.className);};
 
       function cambiarArcoiris(){
         const elementoEstado = document.getElementById("botonArcoiris");
         const label2Off       = document.getElementById("label2Off");
-      
         if(elementoEstado.className == "vivo"){elementoEstado.className = "muerto";
                                                 label2Off.innerHTML = 'Off';} 
         else{elementoEstado.className = "vivo";
@@ -267,7 +260,6 @@ String Pagina = R"====(<!DOCTYPE html>
       function cambiarFiguras(){
         const elementoEstado = document.getElementById("botonFiguras");
         const label3Off       = document.getElementById("label3Off");
-      
         if(elementoEstado.className == "vivo"){elementoEstado.className = "muerto";
                                                 label3Off.innerHTML = 'Off';} 
         else{elementoEstado.className = "vivo";
@@ -278,7 +270,6 @@ String Pagina = R"====(<!DOCTYPE html>
       function cambiarLuzEnt(){
         const elementoEstado = document.getElementById("botonLuzEnt");
         const label4Off       = document.getElementById("label4Off");
-      
         if(elementoEstado.className == "vivo"){elementoEstado.className = "muerto";
                                                 label4Off.innerHTML = 'Off';} 
         else{elementoEstado.className = "vivo";
@@ -353,9 +344,7 @@ String Titulo1     = R"====(</h2><h2></center><label1>Luz sala...............: <
 String Titulo2     = R"====(</h2><h2></center><label1>Cascada y Luces..: </label1>)====";
 String Titulo3     = R"====(</h2><h2></center><label1>Figuras.................: </label1>)====";
 String Titulo4     = R"====(</h2><h2></center><label1>Luz entrada.........: </label1>)====";
-
 String AlmTitulo1  = R"====(<center><h2><br><label1>Alarmas. . .: </label1>)====";
-
 String PagWebHoras = R"====(<br></h2>)====";
 String PagWebHora1 = R"====(<h2></form></h2>)====";
 String PagWebHora2 = R"====(<h2></form></h2>)====";
