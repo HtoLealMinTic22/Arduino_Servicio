@@ -1,3 +1,6 @@
+// ESP32 - Version 1.0.4
+// Tarjeta ESP32 Dev Module
+// Se debe presionar el "Boot", cuando comienza a subir el programa
 // 04/feb/23 - se instalo en github
 
 

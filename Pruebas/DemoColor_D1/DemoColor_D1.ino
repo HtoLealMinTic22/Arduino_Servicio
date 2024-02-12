@@ -1,10 +1,16 @@
-// 04/feb/23 - se instalo en github
+// ESP32 - Version 1.0.4
+// Tarjeta ESP32 Dev Module
+// Se debe presionar el "Boot", cuando comienza a subir el programa
 // Modo ESTACION (STA)
+
+// 04/feb/23 - se instalo en github
+
+
 
 // Creado ChepeCarlos
 // Tutorial Completo en https://nocheprogramacion.com
 // Canal Youtube https://youtube.com/alswnet?sub_confirmation=1
-// nombre GitHub / Pecebre_STA(#)
+// nombre GitHub / Pecebre_STA(3)
 
 template<class T> inline Print &operator <<(Print &obj, T arg) {
   obj.print(arg);
