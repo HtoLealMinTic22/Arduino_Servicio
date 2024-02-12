@@ -58,7 +58,7 @@
 // 09/Feb/2024 -  Se define "WIFI_STA" Estacion con los siguientes parametros   
 //                ssid_1     = "Sistema Adin 2G";
 //                password_1 = "Leal083096";
-//                192,168,10,70
+//                192,168,10,70 - Ok 
 
 
 
